@@ -1,0 +1,12 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Part3_RoutedEventsExample" x:Class="Part3_RoutedEventsExample.UserControlThatCreatesEvent"
+    Height="auto" Width="auto" Background="Gainsboro">
+    <StackPanel Orientation="Horizontal">
+        <Label Content="Click the buttons to raise a custom routed event"/>
+        <Button x:Name="btnRaiseEvent" Margin="10,0,0,0" Content="I Raise An Event" Click="btnRaiseEvent_Click"/>
+        <Button x:Name="btnRaiseEventCustomArgs" Margin="10,0,0,0" Content="I Raise An Event With Custom Event Args"/>
+    </StackPanel>
+
+</UserControl>

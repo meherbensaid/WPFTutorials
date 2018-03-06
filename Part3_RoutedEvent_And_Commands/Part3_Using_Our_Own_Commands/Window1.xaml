@@ -1,0 +1,23 @@
+﻿<Window x:Class="Part3_Using_Our_Own_Commands.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Part3_Using_Our_Own_Commands"   
+    Title="This window uses a custom command" Height="500" Width="500"    
+    ResizeMode="NoResize"   
+    WindowStartupLocation="CenterScreen">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:CustomCommands.simpleCommand}" 
+            CanExecute="simpleCommand_CanExecute" 
+            Executed="simpleCommand_Executed" 
+        />
+    </Window.CommandBindings>
+
+    <StackPanel Orientation="Vertical">
+        
+        <TextBlock HorizontalAlignment="Left" Margin="5,5,5,5" Text="The button can only be click if there is something in the TextBox. This is thanks to a custom Command....Try it"
+                     TextWrapping="Wrap" Height="auto"/>
+        <TextBox x:Name="txtCantBeEmpty" Width="auto" Margin="5,5,5,5" Background="#FFF1FFB2"/>
+        <local:UserControlThatUsesCustomCommand Margin="5,5,5,5"/>
+    </StackPanel>
+</Window>
